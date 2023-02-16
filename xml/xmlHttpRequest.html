@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <title>Using the XMLHttpRequest Object</title>
+  </head>
+  <body>
+    <h2>Using the XMLHttpRequest Object</h2>
+    <div id="demo">
+      <button type="button" onclick="loadOnCall()"></button>
+    </div>
+
+    <script>
+      const loadOnCall = () => {
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = () => {
+          if (this.readyState == 4 && this.status == 200) {
+            document.getElementById("demo").innerHTML = this.responseText;
+          }
+        };
+        xhttp.open("GET", "naji.txt", true);
+        xhttp.send();
+      };
+    </script>
+  </body>
+</html>

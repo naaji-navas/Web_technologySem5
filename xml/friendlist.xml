@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE friendList [
+    <!ELEMENT friendList (friend)>
+    <!ELEMENT friend (name)>
+    <!ELEMENT name (#PCDATA)>
+]>
 <friendList>
     <friend>
         <name>Najid</name>
     </friend>
-    <friend>
+    <!-- <friend>
         <name>Naba</name>
         <name>Naba</name>
         <name>Naba</name>
@@ -19,5 +24,5 @@
     </friend>
     <friend>
         <name>nappi</name>
-    </friend>
+    </friend> -->
 </friendList>
